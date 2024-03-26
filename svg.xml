@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="1000px" height="1000px"
+	viewBox="0 0 4 4"
+	preserveAspectRatio="xMidYMid"
+>
+
+	<defs>
+		<g id="tri">
+			<polygon points = "2,1 1.75,2.3 2.25,2.3"/>
+		</g>
+
+		<g id="rect" fill = "red">
+			<rect x="0.875" y="0.95" width="2.25" height="0.1" transform="rotate(20 2 1)"/>
+		</g>
+
+		<g id="prepoly">
+			<polygon points = "2.2000000029802322, 1.3464101666756891 2.346410166675689, 1.2000000029802322
+							   2.4000000059604645, 1 2.346410166675689, 0.7999999970197679
+							   2.2000000029802322, 0.653589833324311 2, 0.5999999940395355
+							   1.7999999970197678, 0.6535898333243109 1.653589833324311, 0.7999999970197675
+							   1.5999999940395355, 0.9999999999999999 1.6535898333243106, 1.200000002980232
+							   1.7999999970197675, 1.346410166675689 2, 1.4000000059604645
+							   "/>
+			<animateTransform attributeName = "transform" type = "rotate" from = "0 2 1" to = "360 2 1" dur = "5s" repeatCount = "indefinite"/>
+		</g>
+		
+		<g id="poly" fill="rgb(0,255,0)" transform="rotate(20 2 1) translate(-1.075,0)">
+			<use xlink:href="#prepoly"/>
+		</g>
+	</defs>
+	
+	<defs>
+		<g id="w1">
+			<use xlink:href = "#poly" transform="rotate(180 2 1)"/>
+			<use xlink:href = "#poly" transform=""/>
+			<use xlink:href = "#rect" transform=""/>
+			<use xlink:href = "#tri" fill = "blue" transform=""/>
+		</g>
+
+		<g id="w2">
+			<use xlink:href = "#poly" transform="rotate(180 2 1)"/>
+			<use xlink:href = "#poly" transform=""/>
+			<use xlink:href = "#rect" transform=""/>
+			<use xlink:href = "#tri" fill="green" transform=""/>
+		</g>
+
+		<g id="w3">
+			<use xlink:href = "#poly" transform="rotate(180 2 1)"/>
+			<use xlink:href = "#poly" transform=""/>
+			<use xlink:href = "#rect" transform=""/>
+			<use xlink:href = "#tri" fill="purple" transform=""/>
+		</g>
+	</defs>
+
+	<use xlink:href = "#w1" transform="scale(0.4,0.4) translate(1.5,1.5)"/>
+	<use xlink:href = "#w2" transform="scale(0.3,0.3) translate(4.1,0)"/>
+	<use xlink:href = "#w3" transform="scale(0.35,0.35)"/>
+	
+<!-- The scene description goes here! -->
+</svg>
